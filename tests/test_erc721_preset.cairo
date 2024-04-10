@@ -4,18 +4,23 @@ use oz_preset_tests::utils;
 use oz_preset_tests::utils::constants::{
     ZERO, DATA, OWNER, SPENDER, RECIPIENT, OTHER, OPERATOR, PUBKEY, NAME, SYMBOL, BASE_URI
 };
-use oz_preset_tests::tests::mocks::account_mocks::{DualCaseAccountMock, CamelAccountMock};
-use oz_preset_tests::tests::mocks::erc721_receiver_mocks::{CamelERC721ReceiverMock, SnakeERC721ReceiverMock};
-use oz_preset_tests::tests::mocks::non_implementing_mock::NonImplementingMock;
+use oz_preset_tests::mocks::account_mocks::{DualCaseAccountMock, CamelAccountMock};
+use oz_preset_tests::mocks::erc721_receiver_mocks::{
+    CamelERC721ReceiverMock, SnakeERC721ReceiverMock
+};
+use oz_preset_tests::mocks::non_implementing_mock::NonImplementingMock;
+
+
 use openzeppelin::account::AccountComponent;
 use openzeppelin::introspection::interface::ISRC5_ID;
 use openzeppelin::introspection::src5::SRC5Component::SRC5Impl;
 use openzeppelin::token::erc721::ERC721Component::{Approval, ApprovalForAll, Transfer};
 use openzeppelin::token::erc721::ERC721Component;
-use openzeppelin::token::erc721::interface::{ERC721ABI, ERC721ABIDispatcher, ERC721ABIDispatcherTrait, IERC721_ID, IERC721_METADATA_ID};
+use openzeppelin::token::erc721::interface::{
+    ERC721ABI, ERC721ABIDispatcher, ERC721ABIDispatcherTrait, IERC721_ID, IERC721_METADATA_ID
+};
 use openzeppelin::utils::serde::SerializedAppend;
 use starknet::{testing, ContractAddress};
-
 
 
 // Token IDs
