@@ -11,4 +11,10 @@ name = "oz_preset_tests"
 version = "0.1.0"
 dependencies = [
  "openzeppelin",
+ "snforge_std",
 ]
+
+[[package]]
+name = "snforge_std"
+version = "0.21.0"
+source = "git+https://github.com/foundry-rs/starknet-foundry#e09729a4d7bd4a7d19defc429f26bc2ca703303b"
